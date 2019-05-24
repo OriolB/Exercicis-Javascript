@@ -1,0 +1,58 @@
+
+<html>
+    <head>
+        <title>Ciber</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <script>
+            console.log("Hola mundo");
+            window.alert("Em dic Oriol Bassols");
+            var nom = "Oriol";
+            var cognom = "Bassols";
+            console.log(nom + " " + cognom);
+            var num1 = 5;
+            var num2 = 7;
+            var result = num1 + num2;
+            console.log("La suma entre " + num1 + " i " + num2 + " es " + result);
+            var nota_examen = 4.6;
+            if (nota_examen < 5) {
+                window.alert("Ohh has suspes l'examen amb un " + nota_examen);
+            } else {
+                window.alert("Has aprobat l'examen amb un " + nota_examen + " Felicitats!");
+            }
+            var str = "Tinc un cotxe de color blau";
+            console.log(str);
+            var n = str.replace(/blau/i, "verd");
+            console.log(n);
+            var n2 = str.replace(/o/g, "u");
+            console.log(n2);
+            var array = ["taula", "cadira", "ordinador", "libreta"];
+
+            array.forEach(posicio);
+
+            function posicio(value, index) {
+                var txt = "L'objecte " + value + " esta en la posicio " + index;
+                txt = console.log(txt) + "<br>";
+            }
+            function calculadora(operacio, val1, val2) {
+                switch (operacio) {
+                    case "suma": console.log(val1+val2);
+                        break;
+                    case "resta": console.log(val1-val2);
+                        break;
+                    case "multiplicacio":console.log(val1*val2);
+                        break;
+                    default: console.log("error");
+                }
+            }
+
+            var resultat = calculadora("resta", 40, 20);
+            var resultat2 = calculadora("multiplicacio", 6, 8);
+
+        </script>
+
+    </body>
+</html>
