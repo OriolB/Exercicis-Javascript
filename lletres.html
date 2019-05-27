@@ -13,18 +13,68 @@ and open the template in the editor.
     <body>
         <div>TODO write content</div>
         <script>
-            var nom=["O","R","I","O","L"]
-            
+            var nom = ["O", "R", "I", "O", 1, "L"]
+
             nom.forEach(bucle);
 
             function bucle(value) {
                 var txt = value;
                 txt = console.log(txt) + "<br>";
             }
-            
-            
-            
-            
+
+            console.log("Partim del nom " + nom.join(""));
+
+            nom.forEach(trobat);
+
+            function trobat(value) {
+                var vowels = ["a", "e", "i", "o", "u"];
+                if (isNaN(value) == false) {
+                    console.log("Els noms de persones no contenen el número: " + value) + "<br>";
+                }
+                else if (vowels.indexOf(value.toLowerCase()) >= 0) {
+                    console.log("He trobat la VOCAL: " + value) + "<br>";
+                } else {
+                    console.log("He trobat la CONSONANT: " + value) + "<br>";
+                }
+
+            }
+
+            var count = new Map();
+
+
+            for (i = 0; i < nom.length; i++) {
+                if (count.has(nom[i])) {
+                    count.set(nom[i], count.get(nom[i]) + 1)
+                } else {
+                    count.set(nom[i], 1)
+                }
+            }
+
+            console.log(count);
+
+//            function count() {
+//                
+//                nom.sort();
+//
+//                var current = null;
+//                var cnt = 0;
+//                for (var i = 0; i < nom.length; i++) {
+//                    if (nom[i] != current) {
+//                        if (cnt > 0) {
+//                            console.log(current + ': ' + cnt);
+//                        }
+//                        current = nom[i];
+//                        cnt = 1;
+//                    } else {
+//                        cnt++;
+//                    }
+//                }
+//                if (cnt > 0) {
+//                    console.log(current + ': ' + cnt);
+//                }
+//
+//            }
+
         </script>
     </body>
 </html>
