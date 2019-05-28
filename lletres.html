@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Lletres Repetides</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div>TODO write content</div>
         <script>
+            
+            //Exercici 1
+            
             var nom = ["O", "R", "I", "O", 1, "L"]
 
             nom.forEach(bucle);
@@ -24,6 +21,8 @@ and open the template in the editor.
 
             console.log("Partim del nom " + nom.join(""));
 
+            //Exercici 2
+            
             nom.forEach(trobat);
 
             function trobat(value) {
@@ -39,8 +38,9 @@ and open the template in the editor.
 
             }
 
+            //Exercici 3
+            
             var count = new Map();
-
 
             for (i = 0; i < nom.length; i++) {
                 if (count.has(nom[i])) {
@@ -52,6 +52,14 @@ and open the template in the editor.
 
             console.log(count);
 
+            //Exercici 4
+
+            var cognom = ["B", "A", "S", "S", "O", "L", "S"]
+
+            var fullName = nom.concat(" ",cognom)
+            
+            console.log(fullName);
+            
 //            function count() {
 //                
 //                nom.sort();
